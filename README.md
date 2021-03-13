@@ -1,10 +1,6 @@
-## Quick.db
+## JediDB
 
-**Documentation:** [quickdb.js.org](https://quickdb.js.org) <br>
-**Support:** [discord.gg/plexidev](https://discord.gg/plexidev) <br>
-**NPM:** [npmjs.com/quick.db](https://www.npmjs.com/package/quick.db)
-
-Quick.db is an open-source package meant to provide an easy way for beginners and people of all levels to access & store data in a low to medium volume environment. All data is stored persistently via [better-sqlite3](https://github.com/JoshuaWise/better-sqlite3) and comes way various other quality-of-life features.
+JediDB is an open-source package meant to provide an easy way for beginners and people of all levels to access & store data in a low to medium volume environment. All data is stored persistently via [better-sqlite3](https://github.com/JoshuaWise/better-sqlite3) and comes way various other quality-of-life features.
 
 - **Persistent Storage** - Data doesn't disappear through restarts
 - **Works out of the box** - No need to set up a database server, all the data is stored locally in the same project
@@ -13,11 +9,10 @@ Quick.db is an open-source package meant to provide an easy way for beginners an
 
 ## Example
 
-[**Code Sandbox Demo**](https://codesandbox.io/s/quickdb-demo-7ti8z?file=/src/index.js)
 ```js
-const quickdb = require('quick.db');
+const JediDB = require('jedi.db');
 
-const db = quickdb('./json.sqlite');
+const db = JediDB('./json.sqlite');
 
 // Setting an object in the database:
 db.set('userInfo', { difficulty: 'Easy' })
@@ -47,7 +42,7 @@ db.get('userInfo.items') // ['Sword', 'Watch']
 *If you're having troubles installing, please follow [this troubleshooting guide](https://github.com/JoshuaWise/better-sqlite3/blob/master/docs/troubleshooting.md).*
 
 **Linux & Windows**
-- `npm i quick.db`
+- `npm i jedi.db`
 
 ***Note:** Windows users may need to do additional steps [listed here](https://github.com/JoshuaWise/better-sqlite3/blob/master/docs/troubleshooting.md).*
 
@@ -57,5 +52,3 @@ db.get('userInfo.items') // ['Sword', 'Watch']
 3. **Run:** `node-gyp --python /path/to/python2.7` (skip this step if you didn't install python 3.x)
 4. **Run:** `npm i quick.db`
 
-## Support
-I work on these projects in my spare time, if you'd like to support me, you can do so via [Patreon! ❤️](https://www.patreon.com/lorencerri)
